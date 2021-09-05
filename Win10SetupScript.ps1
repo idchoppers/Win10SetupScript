@@ -17,8 +17,13 @@ Checkpoint-Computer -Description "RestorePoint1" -RestorePointType "MODIFY_SETTI
 Write-Host "Restore Point Created!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
-Write-Host "Opening sound settings..." -ForegroundColor Yellow                                                                                        # Sound settings can't be done through the Registry
-mmsys.cpl
+Write-Host "Muting system sounds..." -ForegroundColor Yellow                                                                                          # A reg hive that mutes system sounds
+Start-Process reg -ArgumentList "import sounds.reg" 
+Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
+Write-Host ""
+
+Write-Host "Adding Open Powershell Here..." -ForegroundColor Yellow
+Start-Process reg -ArgumentList "import openpshere.reg"                                                                                               # Add open with powershell here to folders
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
