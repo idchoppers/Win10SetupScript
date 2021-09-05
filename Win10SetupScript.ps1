@@ -90,7 +90,7 @@ Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
 Write-Host "Disabling transparancy..." -ForegroundColor Yellow
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" "EnableTransparancy" 0 -Type Dword -Force                 # Disable transparancy
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize" "EnableTransparency" 0 -Type Dword -Force                 # Disable transparency
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
@@ -139,9 +139,9 @@ Write-Host ""
 Write-Host "Enable Windows 7 UI elements..." -ForegroundColor Yellow
 New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" -Name "MTCUVC” -Force
 Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\MTCUVC" "EnableMtcUvc" 0 -Type Dword -Force                                # This volume manager may not be Metro-style, but it is very fast to use
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" "UseWin32TrayClockExperience" 1 -Type Dword -Force            # Has an analog clock so its cooler
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" "UseWin32BatteryFlyout" 1 -Type Dword -Force                  # Windows 7 battery flyout
-Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" "UseActionCenterExperience" 0 -Type Dword -Force              # Old Action center uses less memory
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" "UseWin32TrayClockExperience" 1 -Type Dword -Force            # Has an analog clock so its cooler
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" "UseWin32BatteryFlyout" 1 -Type Dword -Force                  # Windows 7 battery flyout
+Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\ImmersiveShell" "UseActionCenterExperience" 0 -Type Dword -Force              # Old Action center uses less memory
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "EnableXamlStartMenu" 0 -Type Dword -Force                 # Old menu saves memory
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" "EnableXamlJumpView" 1 -Type Dword -Force                  # Jump View is useful
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
@@ -169,6 +169,11 @@ Write-Host ""
 Write-Host "Install WSL2..." -ForegroundColor Yellow
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart                                                       # WSL2 is a must have
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
+Write-Host ""
+
+Write-Host "Restart explorer..." -ForegroundColor Yellow
+Stop-Process -name explorer –force                                                                                                                    # Restart explorer for cosmetic changes
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
