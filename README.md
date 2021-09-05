@@ -5,7 +5,8 @@ Make sure that you are completely up to date. If you are not, then the restart w
 Needs Admin privileges to run.
 What it does:
 * Makes a restore point
-* Opens sound settings so you can turn off sounds
+* Mutes all system sounds
+* Adds an Open PowerShell here option
 * Sets power to High Performance
 * Makes UAC prompt for password to run a file with Admin privs
 * Disables easy access stuff for keyboards (sticky keys, toggle keys, etc.)
