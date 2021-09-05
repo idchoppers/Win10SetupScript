@@ -39,4 +39,4 @@ That will setup WSL2 and you can install a distro from there.
 
 sounds.reg and openpshere.reg
 =============================
-Both of these files are large changes to the registry that can be imported.
+Both of these files are large changes to the registry that will be imported by the script.
