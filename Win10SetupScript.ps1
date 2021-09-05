@@ -166,6 +166,19 @@ $animInfo.iMinAnimate = $args[0]
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
+Write-Host "Change wallpaper..." -ForegroundColor Yellow
+Function Set-WallPaper($Value)
+{
+
+ Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value $value
+
+ rundll32.exe user32.dll, UpdatePerUserSystemParameters
+
+}
+Set-WallPaper -value "img0.jpg"
+Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
+Write-Host ""
+
 Write-Host "Install WSL2..." -ForegroundColor Yellow
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart                                                       # WSL2 is a must have
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
