@@ -5,6 +5,7 @@ Make sure that you are completely up to date. If you are not, then the restart w
 Needs Admin privileges to run.
 What it does:
 * Makes a restore point
+* Changes wallpaper to solid black
 * Mutes all system sounds
 * Adds an Open PowerShell here option
 * Sets power to High Performance
