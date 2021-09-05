@@ -10,6 +10,8 @@ Write-Host "#                          #" -ForegroundColor Green -BackgroundColo
 Write-Host "############################" -ForegroundColor Green -BackgroundColor DarkBlue
 Write-Host ""
 
+
+
 Write-Host "Installing kernel patch and Debian..." -ForegroundColor Yellow
 Invoke-WebRequest -Uri "https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" -Outfile .\wslkrnl.msi                       # Apply kernel patch for WSL2
 Write-Host "Please install WSL kernel patch and press enter when it is finished." -ForegroundColor Yellow -BackgroundColor DarkRed
