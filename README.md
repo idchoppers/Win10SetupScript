@@ -40,3 +40,7 @@ That will setup WSL2 and you can install a distro from there.
 sounds.reg and openpshere.reg
 =============================
 Both of these files are large changes to the registry that will be imported by the script.
+
+img0.jpg
+========
+A wallpaper that is just solid black. Very nice to look at and is not distracting at all.
