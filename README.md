@@ -34,9 +34,18 @@ What it does:
 * Prompts for restart
 * Other cool stuff
 
-When this is done running and you have restarted, run:
-`wsl --set-default-version 2`
-That will setup WSL2 and you can install a distro from there. 
+When this is done running and you have restarted, run the WSLSetupScript 
+
+WSLSetupScript
+==============
+This script should be ran after the reboot from the first script. It does not need elevated privs to run!
+* Installs WSL kernel patch
+* Enables WSL2
+* Installs Debian
+* Installs Windows Terminal
+* Runs Debian for further configuration
+
+When this is done everything should be set up and installed!
 
 sounds.reg and openpshere.reg
 =============================
