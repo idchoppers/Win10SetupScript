@@ -7,7 +7,7 @@ sudo apt -y upgrade
 echo "[*] Done!"
 
 echo "[*] Installing programs..."
-sudo apt -y install vim neofetch
+sudo apt -y install vim neofetch htop
 echo "[*] Done!"
 
 echo "[*] Changing .bash_aliases and .vimrc"
