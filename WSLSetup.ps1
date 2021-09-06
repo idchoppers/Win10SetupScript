@@ -1,4 +1,4 @@
-﻿# idchoppers, 4/3/2021
+﻿# idchoppers, 4/5/2021
 # To be ran after the setup script, this should install Debian and Windows Terminal
 
 Write-Host ""
