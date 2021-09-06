@@ -45,7 +45,7 @@ This script should be ran after the reboot from the first script. It does not ne
 * Installs Windows Terminal
 * Runs Debian for further configuration
 
-When this is done everything should be set up and installed!
+When this is done everything for Windows should be set up and installed!
 
 sounds.reg and openpshere.reg
 =============================
@@ -54,3 +54,20 @@ Both of these files are large changes to the registry that will be imported by t
 img0.jpg
 ========
 A wallpaper that is just solid black. Very nice to look at and is not distracting at all.
+
+DebianSetup.sh
+==============
+Setup script for Debian in WSL2, do not run with root, it will prompt when it needs it.
+* Updates and upgrades
+* Installs some programs
+* Copies config files
+
+After this is done you now have a completed environment!
+
+.vimrc
+======
+My vimrc config
+
+.bash_aliases
+=============
+My bash aliases and PS1
