@@ -1,4 +1,4 @@
-﻿# Made by idchoppers, 4/3/2021 
+﻿# idchoppers, 4/3/2021 
 # Developed quick 'n dirty in PowerShell ISE (BTW its a really handy tool, I will use it more!)
 
 Write-Host ""
