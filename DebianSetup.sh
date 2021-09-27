@@ -7,7 +7,7 @@ sudo apt -y upgrade
 echo "[*] Done!"
 
 echo "[*] Installing programs..."
-sudo apt -y install vim neofetch htop build-essential
+sudo apt -y install vim neofetch htop build-essential gdb
 echo "[*] Done!"
 
 echo "[*] Changing .bash_aliases and .vimrc"
