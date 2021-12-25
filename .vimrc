@@ -1,6 +1,6 @@
 set number
 syntax on
-colorscheme default
+colorscheme slate
 set tabstop=8
 set expandtab 
 set softtabstop=8
