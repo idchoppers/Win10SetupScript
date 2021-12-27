@@ -1,3 +1,6 @@
+cls
+$Properties = 'Caption', 'CSName', 'Version', 'BuildType', 'OSArchitecture'
+Get-CimInstance Win32_OperatingSystem | Select-Object $Properties | Format-Table -AutoSize
 function Prompt
 {
     Write-Host -ForegroundColor "Red" -NoNewLine "["
