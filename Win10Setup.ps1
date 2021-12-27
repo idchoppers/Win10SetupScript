@@ -189,7 +189,7 @@ Write-Host "Create PowerShell profile..." -ForegroundColor Yellow
 if (!(Test-Path -Path $PROFILE))
 {
         New-Item -Type file -force $PROFILE
-        Move-Item -Path Microsoft.PowerShell_profile.ps1~ -Destination $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1~ # Profile
+        Move-Item -Path Microsoft.PowerShell_profile.ps1 -Destination $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1  # Profile
 }
 
 Write-Host "Restart explorer..." -ForegroundColor Yellow
