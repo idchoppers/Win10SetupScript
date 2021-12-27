@@ -1,3 +1,4 @@
+clear
 echo "\n"
 uname -a
 echo "\n"
