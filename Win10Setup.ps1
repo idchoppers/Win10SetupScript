@@ -179,11 +179,18 @@ Set-WallPaper -value "img0.jpg"
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
-Write-Host "Install WSL2..." -ForegroundColor Yellow
+Write-Host "Enable WSL2..." -ForegroundColor Yellow
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart                                                       # WSL2 is a must have
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
+
+Write-Host "Create PowerShell profile..."
+if (!(Test-Path -Path $PROFILE))
+{
+        New-Item -Type file -force $PROFILE
+        Move-Item -Path profile.ps1 -Destination $env:USERPROFILE\Documents\WindowsPowerShell
+}
 
 Write-Host "Restart explorer..." -ForegroundColor Yellow
 Stop-Process -name explorer –force                                                                                                                    # Restart explorer for cosmetic changes
@@ -197,7 +204,8 @@ Write-Host "!!! WARNING !!!" -ForegroundColor White -BackgroundColor Red
 Write-Host "A Restart is needed to finalize these changes!" -BackgroundColor Red -ForegroundColor White
 Write-Host ""
 $input = Read-Host "Restart computer now? [y/n]"
-switch($input){
+switch($input)
+{
           y{Restart-computer -Force -Confirm:$false}
           n{exit}
     default{write-warning "Invalid Input"}
