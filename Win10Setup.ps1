@@ -185,11 +185,11 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 Write-Host "Done!" -ForegroundColor Black -BackgroundColor Green
 Write-Host ""
 
-Write-Host "Create PowerShell profile..."
+Write-Host "Create PowerShell profile..." -ForegroundColor Yellow
 if (!(Test-Path -Path $PROFILE))
 {
         New-Item -Type file -force $PROFILE
-        Move-Item -Path profile.ps1 -Destination $env:USERPROFILE\Documents\WindowsPowerShell
+        Move-Item -Path Microsoft.PowerShell_profile.ps1 -Destination $env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1   # Profile
 }
 
 Write-Host "Restart explorer..." -ForegroundColor Yellow
