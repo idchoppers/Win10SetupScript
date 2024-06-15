@@ -1,6 +1,9 @@
 ﻿# idchoppers, 4/5/2021
 # To be ran after the setup script, this should install Debian and Windows Terminal
 
+# Copyright 2011 Kyle Smith
+# Licensed under GPL-3.0-or-later
+
 Write-Host ""
 Write-Host "############################" -ForegroundColor Green -BackgroundColor DarkBlue
 Write-Host "#                          #" -ForegroundColor Green -BackgroundColor DarkBlue
