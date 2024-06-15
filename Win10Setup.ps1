@@ -1,7 +1,7 @@
 ﻿# idchoppers, 4/3/2021 
 # Developed quick 'n dirty in PowerShell ISE (BTW its a really handy tool, I will use it more!)
 
-# Copyright 2011 Kyle Smith
+# Copyright 2021 Kyle Smith
 # Licensed under GPL-3.0-or-later
 
 Write-Host ""
