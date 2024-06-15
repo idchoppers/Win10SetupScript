@@ -1,6 +1,9 @@
 #!/bin/sh
 # idchoppers, 4/5/2021
 
+# Copyright 2011 Kyle Smith
+# Licensed under GPL-3.0-or-later
+
 echo "[*] Updating everything..."
 sudo apt -y update
 sudo apt -y upgrade
